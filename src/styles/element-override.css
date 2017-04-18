@@ -1,0 +1,62 @@
+.el-menu {
+    height: 100%;
+}
+
+.header-operations:after,
+header:after {
+    display: inline-block;
+    content: "";
+    height: 100%;
+    vertical-align: middle;
+}
+
+.header-operations li {
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px;
+    margin: 0 10px;
+    line-height: 80px;
+    cursor: pointer;
+}
+
+.header-operations {
+    display: inline-block;
+    float: right;
+    padding-right: 30px;
+    height: 100%;
+}
+
+.cell .table-br {
+    /*padding: 5px 0;*/
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .2s ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+    opacity: 0
+}
+
+.cell .table-br span {
+    float: left;
+    width: 140px;
+}
+
+.order-input {
+    width: 220px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #1f2d3d;
+    margin: 0;
+    font-weight: 400;
+}
+
+.marginTop40 {
+    margin-top: 40px;
+}
