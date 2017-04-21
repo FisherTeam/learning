@@ -33,6 +33,11 @@ export default {
         changeBtn(){
             this.code = +new Date() % 4;
         }
+    },
+    mounted(){
+        this.axios.get('http://127.0.0.1:3000/hello').then(res =>{
+            console.log(res)
+        })
     }
 }
 </script>
