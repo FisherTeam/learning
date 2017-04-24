@@ -4,6 +4,7 @@
                   type="success" class="marginBottom30"></el-alert>
         <el-button type="info">{{ code | codeFilter }} </el-button>
         <el-button type="" @click="changeBtn">改变按钮</el-button>
+        <el-button type="" @click="postBtn">POST</el-button>
     </div>
 </template>
 
@@ -32,6 +33,14 @@ export default {
     methods:{
         changeBtn(){
             this.code = +new Date() % 4;
+        },
+        postBtn(){
+            this.axios.post('/api/user',{
+                userid:'2',
+                name:'hello'
+            }).then(res => {
+                console.log(res)
+            })
         }
     },
     mounted(){
