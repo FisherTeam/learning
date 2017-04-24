@@ -35,7 +35,7 @@ export default {
             this.code = +new Date() % 4;
         },
         postBtn(){
-            this.axios.post('/api/user',{
+            this.axios.post('/api/login',{
                 userid:'2',
                 name:'hello'
             }).then(res => {

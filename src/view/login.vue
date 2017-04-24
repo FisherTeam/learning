@@ -25,7 +25,8 @@ export default {
                 userName: this.formLabelAlign.name,
                 password: this.formLabelAlign.pwd
             }).then(res => {
-                console.log(res)
+                if(res.data.returncode == 1) callback();
+                else callback(new Error(res.data.msg))
             })
         }
 
