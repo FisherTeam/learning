@@ -4,7 +4,7 @@ const {
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const url = require('url')
-const publicPath = ''
+const publicPath = '/static/'
 
 module.exports = (options = {}) => ({
     entry: {
@@ -89,7 +89,7 @@ module.exports = (options = {}) => ({
         port: 8010,
         proxy: {
             '/api/*': {
-                target: '127.0.0.1',
+                target: 'localhost:8060',
                 changeOrigin: true,
                 pathRewrite: {
                     '^/api': ''

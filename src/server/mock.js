@@ -1,4 +1,4 @@
-import Mock from 'mockjs';
+var Mock = require('mockjs');
 
 var Random = Mock.Random;
 
@@ -28,4 +28,4 @@ var mock = Mock.mock({
     }]
 })
 
-export default mock;
+module.exports = mock;
