@@ -8,6 +8,9 @@ app.use(cors());
 app.get('/', function(req, res) {
     res.send('hello express')
 })
+app.get('/api/order', function(req, res) {
+    res.send('hello proxy')
+})
 app.get('/order', function(req, res) {
     res.json(mock.orders)
 })

@@ -35,7 +35,7 @@ export default {
         }
     },
     mounted(){
-        this.axios.get('//127.0.0.1:8060/order').then(res =>{
+        this.axios.get('/api/order').then(res =>{
             console.log(res.data)
         })
     }
