@@ -2,6 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import Element from 'element-ui';
 import router from './router';
+import store from './store';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 import './styles/index.css';
@@ -12,5 +13,6 @@ Vue.use(Element)
 new Vue({ // eslint-disable-line
     el: '#app',
     router,
+    store,
     render: h => h(App)
 });

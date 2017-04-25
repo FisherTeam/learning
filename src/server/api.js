@@ -27,4 +27,12 @@ router.post('/login', function(req, res) {
     }
 })
 
+
+// test api
+
+router.post('/token', function(req, res) {
+    var data = req.body;
+    if (data.token === token) res.json({ msg: '验证通过', returncode: 1 });
+    else res.json({ msg: '验证失败', returncode: 0 })
+})
 module.exports = router;

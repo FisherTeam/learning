@@ -25,7 +25,10 @@ export default {
                 userName: this.formLabelAlign.name,
                 password: this.formLabelAlign.pwd
             }).then(res => {
-                if(res.data.returncode == 1) callback();
+                if (res.data.returncode == 1) {
+                    this.$store.commit('setToken', res.data.token)
+                    callback();
+                }
                 else callback(new Error(res.data.msg))
             })
         }
