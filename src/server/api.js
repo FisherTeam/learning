@@ -27,7 +27,6 @@ router.post('/login', function(req, res) {
     }
 })
 
-
 // test api
 
 router.post('/token', function(req, res) {
