@@ -21,7 +21,6 @@ router.post('/login', function(req, res) {
     if (data.userName == 'admin' && data.password == '123456') {
         token = utils.getToken();
         res.json({ msg: '登录成功', returncode: 1, token })
-
     } else {
         res.json({ msg: '用户名或密码错误', returncode: 0 })
     }
@@ -34,4 +33,5 @@ router.post('/token', function(req, res) {
     if (data.token === token) res.json({ msg: '验证通过', returncode: 1 });
     else res.json({ msg: '验证失败', returncode: 0 })
 })
+
 module.exports = router;

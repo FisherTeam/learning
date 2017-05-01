@@ -9,7 +9,7 @@ var mock = Mock.mock({
         "person": '@cname',
         "phone": /13\d{9}/,
         "address": '@city',
-        "detail": "悦动 2011款 1.6L 自动豪华型悦动 2011款ß",
+        "detail": "悦动 2011款 1.6L 自动豪华型悦动 2011款",
         "carPrice|5-70": 1,
         "loanPrice|5-30": 1,
         "percent": '@integer(10, 90)',
