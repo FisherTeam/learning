@@ -1,6 +1,6 @@
 var router = require('express')['Router']();
-var mock = require('./mock');
-var utils = require('../utils')
+var mock = require('../mock');
+var utils = require('../../utils')
 
 let token = '';
 
