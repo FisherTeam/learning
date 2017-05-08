@@ -10,6 +10,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(cors());
 app.use('/', router)
 
+app.get('/test', function(req, res) {
+    res.json(mock.orders)
+})
+
 app.listen(8060, function() {
     console.log('express listening 8060...')
 })
