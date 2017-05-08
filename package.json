@@ -3,9 +3,10 @@
     "description": "后台管理项目",
     "author": "zbq_cat@qq.com",
     "private": true,
+    "version": "1.0",
     "scripts": {
         "dev": "webpack-dev-server -d --inline --hot --env.dev --open",
-        "server": "node ./src/server",
+        "server": "supervisor ./src/server",
         "start": "npm run server & npm run dev",
         "build": "rimraf dist && webpack -p --progress --hide-modules"
     },
@@ -38,6 +39,7 @@
         "js-beautify": "^1.6.12",
         "less": "^2.7.2",
         "less-loader": "^4.0.2",
+        "lodash": "^4.17.4",
         "mockjs": "^1.0.1-beta3",
         "postcss-loader": "^1.3.3",
         "qs": "^6.4.0",
