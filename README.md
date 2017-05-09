@@ -4,9 +4,13 @@
 # 安装
 npm i
 
-# 运行
-npm run dev
+# 运行 mac
+yarn start
 
-# 打包
-npm run build
+# node
+yarn server
+
+# 前台
+yarn dev
+
 ```
