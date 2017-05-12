@@ -7,7 +7,7 @@
     "scripts": {
         "dev": "webpack-dev-server -d --inline --hot --env.dev --open",
         "server": "supervisor ./src/server",
-        "start": "npm run server & npm run dev",
+        "start": "yarn server & yarn run dev",
         "build": "rimraf dist && webpack -p --progress --hide-modules"
     },
     "dependencies": {
@@ -45,6 +45,7 @@
         "qs": "^6.4.0",
         "rimraf": "^2.5.4",
         "style-loader": "^0.13.2",
+        "supervisor": "^0.12.0",
         "url-loader": "^0.5.8",
         "vue-loader": "^11.1.4",
         "vue-template-compiler": "^2.1.8",
