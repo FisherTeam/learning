@@ -1,7 +1,5 @@
 var Mock = require('mockjs');
 
-var Random = Mock.Random;
-
 var mock = Mock.mock({
     "orders|5-10": [{
         "orderid": /cj\d{10}/,
