@@ -7,7 +7,7 @@
     "scripts": {
         "dev": "webpack-dev-server -d --inline --hot --env.dev --open",
         "server": "supervisor ./src/server",
-        "start": "npm run server & npm run dev",
+        "start": "cnpm run server & cnpm run dev",
         "build": "rimraf dist && webpack -p --progress --hide-modules"
     },
     "dependencies": {
