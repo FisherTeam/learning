@@ -1,4 +1,5 @@
 from collections import OrderedDict
+from collections import Counter
 
 class LastUpdatedOrderedDict(OrderedDict):
 
@@ -17,3 +18,8 @@ class LastUpdatedOrderedDict(OrderedDict):
         else:
             print('add:', (key, value))
         OrderedDict.__setitem__(self, key, value)
+
+c = Counter()
+for ch in 'programming':
+    c[ch] = c[ch] + 1
+print(c)
