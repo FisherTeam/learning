@@ -2,7 +2,7 @@
 install:
 	@npm install
 
-dev: install
+dev: 
 	@npm run dev
 
 build:
