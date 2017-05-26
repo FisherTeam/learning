@@ -58,7 +58,6 @@ export default {
             this.$refs[formName].validate((valid) => {
                 if (valid) 
                     this.$router.push('/home')
-                
             });
         }
     }
