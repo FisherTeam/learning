@@ -8,7 +8,7 @@
 + position有几种取值（5种，4种常用的加-webkit-sticky)
 + 解释下盒模型；box-sizing默认值
 + 写出你知道的伪类（基础hover link visited，加分disabled valid invalid out-of-range等）
-+ 如何解决ip手机1px线的问题
++ 如何解决ip手机1px线的问题、
 + 什么情况会触发gpu加速
 + BFC是什么，哪些属性会触发BFC
 + REM；你是如何利用REM写自适应网页的
@@ -18,7 +18,7 @@
 + call,apply,bind的区别。实现一个bind函数
 + 怎么判断一个对象是不是数组(!isArray)
 + 实现一个indexOf
-+ add(1)(2)(3)(4)... 无限柯里化实现参数相加(考察toString和valueOf)
++ add(1)(2)(3)(4)... 无限柯里化实现A参数相加(考察toString和valueOf)
 + 闭包应用场景，对函数式的了解
 + 什么情况下，执行一个匿名函数 这个函数的this不指向window(说出几种除call,bind,apply之外的情况)
 + 实现原型继承。构造函数继承模式和原型模式的优缺点，分别的适用场景(js高程第6章重点内容)
