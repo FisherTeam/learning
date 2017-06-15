@@ -5,18 +5,12 @@ module.exports = {
             (a, b) => a + (Math.random() * 10 > 5 ? b : b.toUpperCase()), '')
     }
 
-
-
 }
-
 
 var str = "ab-cd-efg-hi-jk";
 
 function to() {
-    return [].reduce.call(str, (a, b) => {
-        return a + (a[a.length - 1] === "-" ? b.toUpperCase() : b);
-    }, '')
+    str.split("-").reduce((a, b) => a + b.replace(b[0], b[0].toUpperCase()))
 }
-console.log(res)
 
 const map = (f, arr) => arr.reduce((result, x) => result.concat(f(x)), [])
