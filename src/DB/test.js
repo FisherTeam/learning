@@ -6,7 +6,6 @@ MongoClient.connect(DB_CONN_STR, function(err, db) {
     db.collection('site').insert([
         { name: 'zbq', age: '20' }
     ], function(err, result) {
-        console.log(result)
         db.close()
     })
 })
