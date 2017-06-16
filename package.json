@@ -3,7 +3,7 @@
     "description": "后台管理项目",
     "author": "zbq_cat@qq.com",
     "private": true,
-    "version": "1.0",
+    "version": "1.0.1",
     "scripts": {
         "dev": "webpack-dev-server -d --inline --hot --env.dev --open",
         "server": "supervisor ./src/server",
