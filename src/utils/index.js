@@ -4,7 +4,6 @@ module.exports = {
         return [].reduce.call(str,
             (a, b) => a + (Math.random() * 10 > 5 ? b : b.toUpperCase()), '')
     }
-
 }
 
 var str = "ab-cd-efg-hi-jk";
