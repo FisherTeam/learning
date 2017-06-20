@@ -13,8 +13,3 @@ const add = arg => {
     fn.toString = add;
     return fn;
 }
-
-
-$(document).ready(function () {
-    
-});

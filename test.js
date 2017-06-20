@@ -1,11 +1,12 @@
-var express = require('express');
-var app = express();
+// 参数是按值传递
 
-app.get('/order', function(req, res) {
-    res.json({
-        name: '1234',
-        id: 1,
-        age: 22
-    });
-})
-app.listen(3000)
+var obj = {
+    name: "zbq"
+}
+
+function setName(obj) {
+    obj = Object.create(obj);
+    obj.name = "tangshao"
+}
+setName(obj);
+console.log(obj);
