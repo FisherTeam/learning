@@ -1,11 +1,10 @@
-var express = require('express');
-var app = express();
+var qs = require("qs");
 
-app.get('/order', function(req, res) {
-    res.json({
-        name: '1234',
-        id: 1,
-        age: 22
-    });
-})
-app.listen(3000)
+var json = {
+    name: "xiaogg",
+    age: 23,
+    sex: 'men',
+    hobby: "women"
+}
+
+console.log(qs.stringify(json))
