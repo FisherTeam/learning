@@ -6,15 +6,3 @@ var a = [1, 2, [1, 2, 3],
     [4, 5, 6, [3, 4, 44]]
 ]
 console.log(flatten(a))
-
-
-const add = arg => {
-    function fn(b) { return arg + b };
-    fn.toString = add;
-    return fn;
-}
-
-
-$(document).ready(function () {
-    
-});
