@@ -1,1 +1,0 @@
-module.exports = { : require('./'),App: require('./App'),DB: require('./DB'),assets: require('./assets'),components: require('./components'),index: require('./index'),main: require('./main'),router: require('./router'),server: require('./server'),store: require('./store'),styles: require('./styles'),utils: require('./utils'),vendor: require('./vendor'),view: require('./view'), }
