@@ -9,4 +9,7 @@ function setName(obj) {
     obj.name = "tangshao"
 }
 setName(obj);
-console.log(obj);
+
+// instansof
+
+console.log(new String("string") instanceof String);
