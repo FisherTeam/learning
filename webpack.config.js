@@ -1,10 +1,9 @@
-const {
-    resolve
-} = require('path')
+const resolve = require('path').resolve
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const url = require('url')
-const publicPath = '/static/'
+const publicPath = ''
 
 module.exports = (options = {}) => ({
     entry: {
@@ -27,46 +26,23 @@ module.exports = (options = {}) => ({
                 use: ['babel-loader'],
                 exclude: /node_modules/
             },
-            {
-                test: /\.html$/,
-                use: [{
-                    loader: 'html-loader',
-                    options: {
-                        root: resolve(__dirname, 'src'),
-                        attrs: ['img:src', 'link:href']
-                    }
-                }]
-            },
+            // {
+            //     test: /\.less$/,
+            // },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader', 'postcss-loader']
-            },
-            {
-                test: /favicon\.png$/,
-                use: [{
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]?[hash]'
-                    }
-                }]
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: "css-loader"
+                })
             },
             {
                 test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
-                exclude: /favicon\.png$/,
                 use: [{
                     loader: 'url-loader',
                     options: {
                         limit: 10000
                     }
-                }]
-            }, {
-                test: /\.less$/,
-                use: [{
-                    loader: "style-loader" // creates style nodes from JS strings
-                }, {
-                    loader: "css-loader" // translates CSS into CommonJS
-                }, {
-                    loader: "less-loader" // compiles Less to CSS
                 }]
             }
         ]
@@ -77,7 +53,10 @@ module.exports = (options = {}) => ({
         }),
         new HtmlWebpackPlugin({
             template: 'src/index.html'
-        })
+        }),
+
+        new ExtractTextPlugin("styles.css"),
+
     ],
     resolve: {
         alias: {
@@ -88,12 +67,12 @@ module.exports = (options = {}) => ({
         host: '127.0.0.1',
         port: 8010,
         proxy: {
-            '/api/*': {
-                target: 'http://localhost:8060/',
+            '/api/': {
+                target: 'http://127.0.0.1:8080',
                 changeOrigin: true,
                 pathRewrite: {
                     '^/api': ''
-                },
+                }
             }
         },
         historyApiFallback: {

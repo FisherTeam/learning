@@ -1,20 +1,39 @@
 import Vuex from 'vuex';
 import Vue from 'vue';
-
 Vue.use(Vuex);
-
-export default new Vuex.Store({
+const store = new Vuex.Store({
     state: {
-        token: window.sessionStorage.getItem('token')
+        user: JSON.parse(window.sessionStorage.getItem('user')),
+        token: '',
+        step: 'email',
+        code: 0
+    },
+    getters: {
+        token(state) {
+            return state.user && state.user['token'];
+        }
     },
     mutations: {
-        setToken(state, token) {
-            state.token = token;
-            window.sessionStorage.token = token;
+        setUser(state, user) {
+            [state.user, state.token] = [user, user['token']];
         },
-        logout(state) {
-            state.token = '';
-            window.sessionStorage.clear('token');
+        logout(state, user) {
+            [state.user, state.token] = [, ];
+            window.sessionStorage.clear('user');
+        },
+        changeStep(state, step) {
+            state.step = step;
+        }
+    },
+    actions: {
+        setUser({ commit }, user) {
+            window.sessionStorage.user = JSON.stringify(user);
+            commit('setUser', user)
+        },
+        logout({ commit }) {
+            commit('logout')
         }
     }
 })
+
+export default store;

@@ -1,8 +1,8 @@
 .PHONY: dist build
-install:
+i:
 	@npm install
 
-dev: 
+dev:
 	@npm run dev
 
 build:

@@ -1,20 +1,22 @@
-var Mock = require('mockjs');
+import Mock from 'mockjs';
+
+var Random = Mock.Random;
 
 var mock = Mock.mock({
-    "orders|5-10": [{
+    "orders|6-15": [{
         "orderid": /cj\d{10}/,
         "date": '@datetime',
         "person": '@cname',
         "phone": /13\d{9}/,
         "address": '@city',
-        "detail": "悦动 2011款 1.6L 自动豪华型悦动 2011款",
+        "detail": "我是金融产品名称",
         "carPrice|5-70": 1,
         "loanPrice|5-30": 1,
         "percent": '@integer(10, 90)',
         "deadline": "@integer(6,36)",
-        "state": "@pick(['待签约','待放款','待审核','已放款'])"
+        "state": "@pick(['未发布','审核通过','审核不通过'])"
     }],
-    "account|5-12": [{
+    "account|6-15": [{
         "orderid": /cj\d{10}/,
         "date": "@datetime",
         "oid": /\d{11}/,
@@ -26,4 +28,4 @@ var mock = Mock.mock({
     }]
 })
 
-module.exports = mock;
+export default mock;

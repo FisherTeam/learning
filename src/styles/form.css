@@ -1,0 +1,5 @@
+.el-form--inline .el-form-item {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+}

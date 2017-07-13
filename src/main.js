@@ -1,14 +1,24 @@
 import Vue from 'vue';
 import App from './App.vue';
-import Element from 'element-ui';
 import router from './router';
-import store from './store';
+import Element from 'element-ui';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
+import store from './store';
+
+import appImg from './components/app-img.vue';
 import './styles/index.css';
 
+Vue.component('app-img', appImg)
+Vue.use(Element);
 Vue.use(VueAxios, axios);
-Vue.use(Element)
+
+axios.interceptors.request.use(function(config) {
+    return config;
+}, function(error) {
+    // Do something with request error
+    return Promise.reject(error);
+});
 
 new Vue({ // eslint-disable-line
     el: '#app',
