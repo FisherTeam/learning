@@ -17,7 +17,7 @@
 
 ### JS部分
 + call,apply,bind的区别。实现一个bind函数
-+ 怎么判断一个对象是不是数组(!isArray)
++ 怎么判断一个对象是不是数组(!isArray)             
 + 实现一个indexOf
 + add(1)(2)(3)(4)... 无限柯里化实现A参数相加(考察toString和valueOf)
 + 闭包应用场景，对函数式的了解
